@@ -17,7 +17,7 @@ def is_balanced(string):
         "{" : "}"
     } 
     for el in arr:
-        print(stack)
+        #print(stack) #uncomment this to see how it works
         if not stack:
             stack.append(el)
         else:
@@ -28,7 +28,6 @@ def is_balanced(string):
                     stack.append(el)
                 else:
                     return False
-    print(stack)
     if not stack:
         return True
     else: 
