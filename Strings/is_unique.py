@@ -1,3 +1,7 @@
+
+#Implement an algorithm to determine if a string has all unique characters. What if you
+#cannot use additional data structures?
+
 def is_unique(text):
     charFlag = [0] * 128
     len_text = len(text)
