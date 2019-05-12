@@ -5,6 +5,14 @@ class BtTree {
     this.root = null;
   }
 
+  public boolean isEmpty() {
+    if (this.root == null) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   public BtTree(int value) {
     this.root = new BtNode(value);
   }
