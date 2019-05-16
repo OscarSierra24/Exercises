@@ -21,13 +21,13 @@ class BtTree {
     this.root = new BtNode(value);
   }
 
-  public void add(int value) {
+  public BtNode add(int value) {
     BtNode newNode = new BtNode(value);
     BtNode current = this.root;
 
     if (current == null) {
       this.root = newNode;
-      return;
+      return this.root;
     }
 
     while (current != null) {
@@ -35,6 +35,7 @@ class BtTree {
         if (current.right != null) {
           current = current.right;
         } else {
+          newNode.parent = current;
           current.right = newNode;
           break;
         }
@@ -42,11 +43,14 @@ class BtTree {
         if (current.left != null) {
           current = current.left;
         } else {
+          newNode.parent = current;
           current.left = newNode;
           break;
         }
       }
     }
+
+    return newNode;
   }
 
   private void printInorder(BtNode node) {
