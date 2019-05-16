@@ -1,11 +1,13 @@
 class BtNode {
   BtNode left;
   BtNode right;
+  BtNode parent;
   int value; 
 
   public BtNode(int value) {
     this.left = null;
     this.right = null;
+    this.parent = null;
     this.value = value;
   }
 
@@ -15,6 +17,10 @@ class BtNode {
 
   public BtNode getRight() {
     return this.right;
+  }
+
+  public BtNode getParent() {
+    return this.parent;
   }
 
   public int getValue() {
@@ -28,6 +34,10 @@ class BtNode {
   public void setRight(BtNode right) {
     this.right = right;
   }
+
+  public void setParent(BtNode parent) {
+    this.parent = parent;
+  } 
 
   public void setValue(int value) {
     this.value = value;
