@@ -107,6 +107,7 @@ class Graph {
 
   public static void main(String[] args) {
     //build order
+    /*
     Graph graph = new Graph();
     
     graph.addNode(1);
@@ -126,5 +127,7 @@ class Graph {
 
     ArrayList<GNode> al = graph.buildOrder();
     System.out.println(al);
+    */
+    
   }
 }
