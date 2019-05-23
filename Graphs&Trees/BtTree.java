@@ -21,8 +21,7 @@ class BtTree {
     this.root = new BtNode(value);
   }
 
-  public BtNode add(int value) {
-    BtNode newNode = new BtNode(value);
+  public BtNode add(BtNode newNode) {
     BtNode current = this.root;
 
     if (current == null) {
@@ -49,21 +48,53 @@ class BtTree {
         }
       }
     }
-
     return newNode;
+  }
+
+  public BtNode add(int value) {
+    BtNode newNode = new BtNode(value);
+    return add(newNode);
+  }
+
+  public void printInorder() {
+    printInorder(this.root);
   }
 
   private void printInorder(BtNode node) {
     if (node == null) {
       return;
     }
-
     printInorder(node.left);
     System.out.println(node.value);
     printInorder(node.right);
   }
 
-  public void printInorder(){
-    printInorder(this.root);
+  public void printPreorder() {
+    printPreorder(this.root);
   }
+
+  public void printPreorder(BtNode node) {
+    if (node == null) {
+      return;
+    }
+
+    System.out.println(node.value);
+    printPreorder(node.left);
+    printPreorder(node.right);
+  }
+
+  public void printPostorder(){
+    printPostorder(this.root);
+  }
+
+  private void printPostorder(BtNode node) {
+    if (node == null) {
+      return;
+    }
+
+    printPostorder(node.left);
+    printPostorder(node.right);
+    System.out.println(node);
+  }
+
 }
