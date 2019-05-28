@@ -43,13 +43,8 @@ class RearrangeLastNNodes {
     // head is now at n nodes away from the end
     head = current;
 
-    // traverse till the end
-    while (current.next != null) {
-      current = current.next;
-    }
-
     // the tail now points towards the beggining of l
-    current.next = l;
+    guideNode.next = l;
 
     return head;
   }
