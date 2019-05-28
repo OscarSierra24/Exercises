@@ -14,7 +14,7 @@ class RearrangeLastNNodes {
     if (n == 0 || l == null) return l;
 
     ListNode<Integer> slow; // used to iterate the list
-    ListNode<Integer> fast; // the node that is n positions ahead of current
+    ListNode<Integer> fast; // the node that is n positions ahead of slow
     ListNode<Integer> prev;
 
     prev = null;
@@ -28,7 +28,7 @@ class RearrangeLastNNodes {
     if (fast.next == null) return l; // if list length is n, then there's nothing to rearrange
 
     // iterate until the node that is n positions ahead faces null
-    // curent will be n nodes away from the end
+    // slow will be n nodes away from the end
     while (fast.next != null) {
       fast = fast.next;
       prev = slow;
