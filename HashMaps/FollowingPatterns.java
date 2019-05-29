@@ -1,3 +1,5 @@
+//https://app.codesignal.com/interview-practice/task/3PcnSKuRkqzp8F6BN/solutions
+
 class FollowingPatterns {
   boolean areFollowingPatterns(String[] strings, String[] patterns) {
     HashMap<String, String> map = new HashMap<>();
