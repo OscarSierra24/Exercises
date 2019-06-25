@@ -12,6 +12,10 @@ class BiggestSquare {
   }
 
   private static boolean squareCanGrow(int[][] arr, int i, int j, int size) {
+    /** Checks if the current square can grow by visiting the next possible row 
+     *  and the next possible column and seeing if there are positions with 0 as value
+     *  if there's a 0, then the square cannot grow more  
+     */
     final int nextColPos = j + size;
     final int nextRowPos = i + size;
     
